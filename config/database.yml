@@ -21,5 +21,9 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  username: sqale_92008a1749
+  password: 0409a622a823c608146e3f73cd20ed81818cdc4c1311784d
+  database: sqale_92008a1749
+  host: mysql001.sqale.jp
