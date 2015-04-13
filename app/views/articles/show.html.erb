@@ -1,2 +1,17 @@
 <h1><%= @article.title %></h1>
 
+<ul>
+
+	<% @article.contents.each do |content| %>
+	<li><%= content.headline %></li>
+	<% end %>
+
+	<li>
+		<%= form_for [@article, @article.contents.build] do |f| %>
+		<%= f.text_field :headline %>
+		<%= f.text_field :body %>
+		<%= f.submit %>
+		<% end %>
+	</li>
+
+</ul>
